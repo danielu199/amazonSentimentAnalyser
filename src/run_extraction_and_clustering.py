@@ -37,9 +37,9 @@ def main(productID):
     nlp = init_spacy()
     sid = init_nltk()
     aspect_extraction.aspect_extraction(nlp,sid)
-    file_raw = os.path.dirname(os.getcwd()) + "/data/reviews_aspect_raw.json"
+    file_raw = "./data/reviews_aspect_raw.json"
     print("hallo")
-    file_map = os.path.dirname(os.getcwd()) + "/data/reviews_aspect_mapping.json"
+    file_map = "./data/reviews_aspect_mapping.json"
     mapper.map(file_raw, file_map)
     print("hallo1")
     #Apekte werden geclustert
