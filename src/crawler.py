@@ -21,7 +21,7 @@ def main(productID):
     r = requests.get(url, headers=headers)
     content = r.content
     soup = BeautifulSoup(content, "lxml")
-    file = open( os.path.dirname(os.getcwd()) + "/data/reviews.csv", "w")
+    file = open("./data/reviews.csv", "w")
 
 
 
@@ -38,9 +38,15 @@ def main(productID):
         content = resp.content
         soup = BeautifulSoup(content, "lxml")
 
+        testifempty = soup.findAll('span', attrs={'data-hook': 'review-body'})
+
+        if len(testifempty) == 0:
+            break
+
         for d in soup.findAll('span', attrs={'data-hook': 'review-body'}):
             review = d.find('span')
-            reviews.append(review.text)
+            if review != None:
+                reviews.append(review.text)
 
         for a in soup.findAll('div', attrs={'data-hook': 'review'}):
             id = a.get('id')

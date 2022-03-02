@@ -6,7 +6,7 @@ def main(productID):
     sentiments = {}
     counters = {}
     reviews = {}
-    with open(os.path.dirname(os.getcwd()) + '/data/model_results.json') as f:
+    with open('./data/model_results.json') as f:
         data = json.load(f)
     for i, product in enumerate(data):
         for prod_id, this_product_reviews in product.items():

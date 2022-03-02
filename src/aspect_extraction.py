@@ -13,7 +13,7 @@ from dataprep import clean_data
 prod_pronouns = ['it','this','they','these', 'one']
 
 def fetch_reviews (usecols = None):
-    reviewpath = os.path.dirname(os.getcwd()) + '/data/reviews.csv'
+    reviewpath = './data/reviews.csv'
     raw_data = pd.read_csv(reviewpath, header=0, error_bad_lines=False, usecols=usecols)
     print(raw_data.head())
     return raw_data
@@ -279,7 +279,7 @@ def aspect_extraction(nlp,sid):
     reviews = clean_data.clean_data(raw_data)
     aspect_list = extract_aspects(reviews,nlp,sid)
     aspect_list = list(aspect_list)
-    with open(os.path.dirname(os.getcwd()) + '/data/reviews_aspect_raw.json', 'w') as outfile:
+    with open('./data/reviews_aspect_raw.json', 'w') as outfile:
         json.dump(aspect_list, outfile)
 
 

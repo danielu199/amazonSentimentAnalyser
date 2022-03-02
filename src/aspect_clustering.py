@@ -101,7 +101,7 @@ def update_reviews_data(reviews_data, nlp):
 
         if ((i%10000 == 0) ):
             ctr += 1
-            with open(os.path.dirname(os.getcwd())+ '/data/model_results.json', 'w') as f:
+            with open('./data/model_results.json', 'w') as f:
                 json.dump(updated_reviews,f)
             updated_reviews = []
 
@@ -110,10 +110,10 @@ def update_reviews_data(reviews_data, nlp):
 def main():
     nlp = init_spacy()
 
-    with open(os.path.dirname(os.getcwd()) + '/data/reviews_aspect_mapping.json', 'r') as fobj:
+    with open('./data/reviews_aspect_mapping.json', 'r') as fobj:
         reviews_data = json.load(fobj)
     update_reviews_data(reviews_data, nlp)
-    aspect_json_encoding.run("/Users/daniel/PycharmProjects/KDSeminar/data/model_results.json", "/Users/daniel/PycharmProjects/KDSeminar/data/model_results_encoding.json")
+    aspect_json_encoding.run("./data/model_results.json", "./data/model_results_encoding.json")
 
 
 if __name__ == '__main__' :

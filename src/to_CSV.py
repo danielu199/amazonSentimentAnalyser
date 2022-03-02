@@ -4,8 +4,8 @@ import os
 
 def main(productID):
     i = 0
-    file = open("/Users/daniel/PycharmProjects/KDSeminar/data/bewertung.csv", "w")
-    file2 = open("/Users/daniel/PycharmProjects/KDSeminar/data/reviews.csv", "r")
+    file = open("./data/bewertung.csv", "w")
+    file2 = open("./data/reviews.csv", "r")
     writer = csv.writer(file)
     reader = csv.reader(file2)
     mydict = {rows[2]: rows[1] for rows in reader}
