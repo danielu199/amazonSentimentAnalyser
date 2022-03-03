@@ -1,7 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 import csv
-import os
 
 def main(productID):
     count = 1 # the count in queue used to track the elements in queue
