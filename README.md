@@ -29,7 +29,7 @@ python start.py
 
 Now you can start, just find any product from amazon.com and insert the product ID. You can find it in the url of the product. It always comes after /dp/. It could look something like: 
 
-https://www.amazon.com/dp/**B07PY34G7Y**/
+https://www.amazon.com/dp/<span></span>**B07PY34G7Y**/
 
 Have fun playing with different products. All are possible.
 
