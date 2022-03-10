@@ -19,12 +19,12 @@ source bin/activate
 Then you install all required packages with the requirements.txt
 
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 Finally start the scrip 'start.py'
 
 ```bash
-python start.py
+python3 start.py
 ``` 
 
 Now you can start, just find any product from amazon.com and insert the product ID. You can find it in the url of the product. It always comes after /dp/. It could look something like: 
